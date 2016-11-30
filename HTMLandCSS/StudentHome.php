@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="Stylesheet.css" type="text/css">
 </head>
 <body>
+<<<<<<< HEAD
 
 <div>
     <h1><strong>Welcome to the Student Page</strong></h1>
