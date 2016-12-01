@@ -15,8 +15,8 @@
 
 <div>
     <a href="New Observation.php"><button>New Observation</button></a>
-    <button>Delete Observation</button>
-    <button>Update Table</button>
+    <a href="Delete Observation.php"><button>Delete Observation</button></a>
+    <a href="Update Observation.php"><button>Update Table</button></a>
 </div>
 
 </body>
