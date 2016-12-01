@@ -9,13 +9,13 @@
 
 <div>
     <h1><strong>Welcome to the Professor Page</strong></h1>
-    <h5>Home</h5>
+    <a href="Home.php"><h5>Home</h5></a>
 </div>
 
 
 <div>
     <a href="New Observation.php"><button>New Observation</button></a>
-    <a href="New Report.php"><button>Delete Observation</button></a>
+    <button>Delete Observation</button>
     <button>Update Table</button>
 </div>
 
