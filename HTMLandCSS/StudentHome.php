@@ -13,8 +13,8 @@
 </div>
 
 <div>
-    <button>New Observation</button>
-    <button>New Report</button>
+    <a href="New Observation.php"><button>New Observation</button></a>
+    <a href="New Report.php"><button>New Report</button></a>
 </div>
 
 </body>
