@@ -14,7 +14,6 @@
 
 <div>
     <button>New Observation</button>
-    <button>New Report</button>
 </div>
 
 </body>
