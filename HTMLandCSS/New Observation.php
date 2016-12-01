@@ -7,6 +7,9 @@
 </head>
 
 <body>
+<div>
+    <h1><strong>Create a new Observation</strong></h1>
+</div>
 
 
 </body>

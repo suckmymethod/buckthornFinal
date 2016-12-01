@@ -7,6 +7,9 @@
 </head>
 
 <body>
+<div>
+    <h1><strong>Create new Report</strong></h1>
+</div>
 
 
 </body>
