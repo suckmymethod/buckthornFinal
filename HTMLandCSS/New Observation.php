@@ -11,6 +11,8 @@
     <h1><strong>Create a new Observation</strong></h1>
 </header>
 
+<a href="ProfessorHome.php"><button>Prof Home</button></a>
+
 
 <footer>
     <div class="foot-text">
