@@ -7,10 +7,17 @@
 </head>
 
 <body>
-<div>
+<header>
     <h1><strong>Create a new Observation</strong></h1>
-</div>
+</header>
 
+
+<footer>
+    <div class="foot-text">
+        <a href="Home.php"><p>Home</p></a>
+        <p class="foot-CR">© SMM 2016</p>
+    </div>
+</footer>
 
 </body>
 </html>

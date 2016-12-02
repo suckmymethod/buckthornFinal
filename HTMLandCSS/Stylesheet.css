@@ -2,3 +2,32 @@ body{
     border: 2px solid black;
     padding: 5px;
 }
+
+header{
+    background-color: black;
+    color: white;
+    margin: -5px -5px 20px -5px;
+    padding: 2px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    margin: 20px -5px -5px -5px;
+    padding: 2px;
+}
+
+a{
+    color: white;
+    /*text-align: center;*/
+}
+
+.foot-CR{
+    /*text-align: center;*/
+    margin-left: 10px;
+}
+
+.foot-text{
+    display: inline-flex;
+    margin-left: 45%;
+}

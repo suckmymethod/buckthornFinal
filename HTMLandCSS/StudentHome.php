@@ -7,15 +7,22 @@
 </head>
 <body>
 
-<div>
+<header>
     <h1><strong>Welcome to the Student Page</strong></h1>
-    <a href="Home.php"><h5>Home</h5></a>
-</div>
+</header>
 
 <div>
     <a href="New Observation.php"><button>New Observation</button></a>
     <a href="New Report.php"><button>New Report</button></a>
 </div>
+
+
+<footer>
+    <div class="foot-text">
+        <a href="Home.php"><p>Home</p></a>
+        <p class="foot-CR">© SMM 2016</p>
+    </div>
+</footer>
 
 </body>
 </html>

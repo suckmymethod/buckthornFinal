@@ -11,10 +11,10 @@
 //$form = $_GET['form'];
 //?>
 
-<div>
+<header>
     <h1><strong>The Buckthorn Database</strong></h1>
     <h5>Created By: Kyle Larsen, Jon Jarl, Nathan Li</h5>
-
+</header>
 <!--    <div>-->
 <!--        <form>-->
 <!--            INPUT:<br>-->
@@ -29,6 +29,13 @@
     <a href="StudentHome.php"><button>Student</button></a>
     <a href="ProfessorHome.php"><button>Professor</button></a>
 
-</div>
+
+
+<footer>
+    <div class="foot-text">
+        <a href="Home.php"><p>Home</p></a>
+        <p class="foot-CR">© SMM 2016</p>
+    </div>
+</footer>
 </body>
 </html>
