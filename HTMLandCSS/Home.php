@@ -22,10 +22,21 @@
 <!--    </div>-->
 
 <!--  Buttons to Link to Student/Professor Home pages  -->
+<div>
+    <form>
+        <h5 class="login">Username:</h5><input type="text" name="username"/>
+        <br>
+        <br>
+        <h5 class="login">Password:</h5><input type="text" name="password"/>
+    </form>
+</div>
+
+<br>
+<br>
+<div>
     <a href="StudentHome.php"><button>Student</button></a>
     <a href="ProfessorHome.php"><button>Professor</button></a>
-
-
+</div>
 
 <footer>
     <div class="foot-text">
