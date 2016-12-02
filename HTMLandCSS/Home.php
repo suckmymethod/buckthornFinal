@@ -7,15 +7,7 @@
 </head>
 <body>
 
-<<<<<<< HEAD
-<div>
-=======
-<?php
-//$form = $_GET['form'];
-//?>
-
 <header>
->>>>>>> refs/remotes/origin/master
     <h1><strong>The Buckthorn Database</strong></h1>
     <h5>Created By: Kyle Larsen, Jon Jarl, Nathan Li</h5>
 </header>
