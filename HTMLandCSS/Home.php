@@ -7,10 +7,6 @@
 </head>
 <body>
 
-<?php
-//$form = $_GET['form'];
-//?>
-
 <div>
     <h1><strong>The Buckthorn Database</strong></h1>
     <h5>Created By: Kyle Larsen, Jon Jarl, Nathan Li</h5>

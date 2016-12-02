@@ -11,6 +11,6 @@
     <h1><strong>Create a new Observation</strong></h1>
 </div>
 
-ur mom
+
 </body>
 </html>
