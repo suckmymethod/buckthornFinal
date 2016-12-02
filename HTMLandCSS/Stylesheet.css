@@ -19,7 +19,13 @@ footer{
 
 a{
     color: white;
+    text-decoration: none;
     /*text-align: center;*/
+}
+
+a:hover{
+    text-decoration: underline;
+    color: aqua;
 }
 
 .foot-CR{
@@ -31,3 +37,4 @@ a{
     display: inline-flex;
     margin-left: 45%;
 }
+
