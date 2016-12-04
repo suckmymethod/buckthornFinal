@@ -16,6 +16,10 @@
     <br>
     <br>
     <p class="textbox-text">Quadrant location:</p>
+    <br>
+    <br>
+    <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
+    <p class="textbox-text">m^2</p>
 
 </div>
 
