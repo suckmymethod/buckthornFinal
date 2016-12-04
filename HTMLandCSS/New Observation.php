@@ -11,13 +11,16 @@
     <h1><strong>Create a new Observation</strong></h1>
 </header>
 
-<div>
-    <p class="textbox-text">Date of Observation:</p><input type="text" name="ObservDate"/>
+<form>
+    <p class="textbox-text">Date of Observation:</p>
+    <input type="text" name="ObservDate"/>
     <br>
     <br>
     <p class="textbox-text">Quadrant location:</p>
+    <input type="text" name="quad-N" class="textbox-text"/>N
+    <input style="margin-left: 5px;"type="text" name="quad-W" class="textbox-text"/>W
 
-</div>
+</form>
 
 <footer>
     <div class="foot-text">
