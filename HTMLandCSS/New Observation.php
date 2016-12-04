@@ -12,10 +12,10 @@
 </header>
 
 <div>
-    <h4 class="textbox-text">Date of Observation:</h4><input type="text" name="ObservDate"/>
+    <p class="textbox-text">Date of Observation:</p><input type="text" name="ObservDate"/>
     <br>
     <br>
-    <h4 class="textbox-text">Quadrant location:</h4>
+    <p class="textbox-text">Quadrant location:</p>
 
 </div>
 
