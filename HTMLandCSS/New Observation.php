@@ -11,17 +11,23 @@
     <h1><strong>Create a new Observation</strong></h1>
 </header>
 
-<div>
-    <p class="textbox-text">Date of Observation:</p><input type="text" name="ObservDate"/>
+<form>
+    <p class="textbox-text">Date of Observation:</p>
+    <input type="text" name="ObservDate"/>
     <br>
     <br>
     <p class="textbox-text">Quadrant location:</p>
+<<<<<<< HEAD
     <br>
     <br>
     <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
     <p class="textbox-text">m^2</p>
+=======
+    <input type="text" name="quad-N" class="textbox-text"/>N
+    <input style="margin-left: 5px;"type="text" name="quad-W" class="textbox-text"/>W
+>>>>>>> 3d094638c012c90f1bff9a3f6d1b0e9a7be2347e
 
-</div>
+</form>
 
 <footer>
     <div class="foot-text">
