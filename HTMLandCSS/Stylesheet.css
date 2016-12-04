@@ -38,3 +38,7 @@ a:hover{
     margin-left: 45%;
 }
 
+.textbox-text{
+    margin-right: 10px;
+    display: inline;
+}
