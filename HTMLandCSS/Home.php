@@ -22,7 +22,14 @@
 <!--    </div>-->
 
 <!--Backend for login process-->
+<?php
+$con = mysqli_connect("localhost") or die("Some error occurred");
 
+$query = "show tables";
+$result = mysqli_query($con, $query);
+echo $result;
+
+?>
 
 <!--  Buttons to Link to Student/Professor Home pages  -->
 <div>
