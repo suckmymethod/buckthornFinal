@@ -13,17 +13,50 @@
 
 <form>
     <p class="textbox-text">Date of Observation:</p>
-    <input type="text" name="ObservDate"/>
-    <br>
-    <br>
-    <p class="textbox-text">Quadrant location:</p>
-    <input type="text" name="quad-N" class="textbox-text"/>N
-    <input style="margin-left: 5px;"type="text" name="quad-W" class="textbox-text"/>W
-    <br>
-    <br>
-    <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
-    <p class="textbox-text">m^2</p>
+    <input type="text" name="ObservDate"/><i>(MM/DD/YYYY)</i>
 
+    <br>
+    <br>
+
+    <p class="textbox-text">Quadrant location:</p>
+    <input type="text" name="quad-N" class="textbox-text"/><i>N</i>
+    <input style="margin-left: 5px;" type="text" name="quad-W" class="textbox-text"/><i>W</i>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
+    <i>m^2</i>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Buckthorn Stem Count:</p>
+    <input type="text" name="stem-count"/>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Foliar Coverage:</p>
+    <input type="text" name="folilar-cov"/>
+    <i>%</i>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Stem Circumference:</p>
+    <input type="text" name="stem-circum"/>
+    <i>cm</i>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Habitat Description:</p>
+    <br>
+    <textarea name="Habitat" ROWS="3" cols="30"></textarea>
+
+    <br>
+    <br>
 
 </form>
 
