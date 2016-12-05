@@ -58,6 +58,10 @@
     <br>
     <br>
 
+    <p class="textbox-text">Notes:</p>
+    <br>
+    <textarea name="notes" ROWS="3" cols="30"></textarea>
+
 </form>
 
 <footer>
