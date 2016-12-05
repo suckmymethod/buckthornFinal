@@ -4,14 +4,14 @@ body{
 }
 
 header{
-    background-color: black;
+    background-color: #123563;
     color: white;
     margin: -5px -5px 20px -5px;
     padding: 2px;
 }
 
 footer{
-    background-color: black;
+    background-color: #123563;
     color: white;
     margin: 20px -5px -5px -5px;
     padding: 2px;
@@ -51,4 +51,15 @@ form{
 
 p{
     font-family: serif;
+}
+
+.logo{
+    float: right;
+    width: 9em;
+    height:40px;
+
+}
+
+h1{
+    position: relative;
 }
