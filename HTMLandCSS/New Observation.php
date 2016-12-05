@@ -9,61 +9,79 @@
 <body>
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
-    <h1><strong>Create a new Observation</strong></h1>
+    <h1><strong>Create New Observation</strong></h1>
 </header>
 
-<form>
-    <p class="textbox-text">Date of Observation:</p>
-    <input type="text" name="ObservDate"/><i>(MM/DD/YYYY)</i>
+<form class="table">
 
-    <br>
-    <br>
+        <p class="textbox-text">Date of Observation:</p>
+        <input type="text" name="ObservDate"/>
+        <i>(MM/DD/YYYY)</i>
 
-    <p class="textbox-text">Quadrant location:</p>
-    <input type="text" name="quad-N" class="textbox-text"/><i>N</i>
-    <input style="margin-left: 5px;" type="text" name="quad-W" class="textbox-text"/><i>W</i>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <p class="textbox-text">Quadrant location:</p>
+        <input type="text" name="quad-N" class="textbox-text"/><i>N</i>
+        <input style="margin-left: 5px;" type="text" name="quad-W" class="textbox-text"/><i>W</i>
 
-    <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
-    <i>m^2</i>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
+        <i>m^2</i>
 
-    <p class="textbox-text">Buckthorn Stem Count:</p>
-    <input type="text" name="stem-count"/>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <p class="textbox-text">Buckthorn Stem Count:</p>
+        <input type="text" name="stem-count"/>
 
-    <p class="textbox-text">Foliar Coverage:</p>
-    <input type="text" name="folilar-cov"/>
-    <i>%</i>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <p class="textbox-text">Foliar Coverage:</p>
+        <input type="text" name="folilar-cov"/>
+        <i>%</i>
 
-    <p class="textbox-text">Stem Circumference:</p>
-    <input type="text" name="stem-circum"/>
-    <i>cm</i>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <p class="textbox-text">Stem Circumference:</p>
+        <input type="text" name="stem-circum"/>
+        <i>cm</i>
 
-    <p class="textbox-text">Habitat Description:</p>
-    <br>
-    <textarea name="Habitat" ROWS="3" cols="30"></textarea>
+        <br>
+        <br>
 
-    <br>
-    <br>
+        <p class="textbox-text">Habitat Description:</p>
+        <br>
+        <textarea name="Habitat" ROWS="3" cols="30"></textarea>
 
-    <p class="textbox-text">Notes:</p>
-    <br>
-    <textarea name="notes" ROWS="3" cols="30"></textarea>
+        <br>
+        <br>
+
+        <p class="textbox-text">Notes:</p>
+        <br>
+        <textarea name="notes" ROWS="3" cols="30"></textarea>
 
 </form>
+
+<form class="table">
+    <p class="textbox-text">Enter the Number of Species:</p>
+    <input type="text" name="NumSpecies"/>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Shanon Weiner Index:</p>
+    <input type="text" name="SWI"/>
+</form>
+
+<form class="table">
+
+</form>
+
 
 <footer>
     <div class="foot-text">

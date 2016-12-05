@@ -46,8 +46,8 @@ a:hover{
 form{
     background-color:  	#F3F3F3;
     padding: 10px;
+    margin: 10px 20px 20px 20px;
 }
-
 
 p{
     font-family: serif;
@@ -57,9 +57,16 @@ p{
     float: right;
     width: 9em;
     height:40px;
+    padding: 15px;
+}
+
+.table{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
 
 }
 
-h1{
-    position: relative;
+textarea {
+    max-width: 100%;
 }
