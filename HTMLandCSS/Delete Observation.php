@@ -13,7 +13,7 @@
 </header>
 
 <div>
-    <p>Choose an Observation to delete</p>
+    <p>Choose an Observation to Delete</p>
 </div>
 
 <a href="ProfessorHome.php"><button>Cancel</button></a>

@@ -13,7 +13,7 @@
 </header>
 
 <div>
-    <p>Choose an Observation to update</p>
+    <p>Choose an Observation to Update</p>
 </div>
 
 
