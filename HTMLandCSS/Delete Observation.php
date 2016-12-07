@@ -18,7 +18,12 @@
     </select>
 </form>
 
-<a href="ProfessorHome.php"><button>Prof Home</button></a>
+<a href="ProfessorHome.php">
+    <button>Cancel</button>
+</a>
+<a href="ProfessorHome.php">
+    <button>Submit</button>
+</a>
 
 <footer>
     <div class="foot-text">
