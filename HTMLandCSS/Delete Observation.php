@@ -16,8 +16,6 @@
     <p>Choose an Observation to Delete</p>
 </div>
 
-
-
 <a href="ProfessorHome.php">
     <button>Cancel</button>
 </a>

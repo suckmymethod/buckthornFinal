@@ -16,6 +16,12 @@
     <p>Choose an Observation to Update</p>
 </div>
 
+<form>
+    <select>
+        <--To be filled with php code-->
+    </select>
+</form>
+
 <form class="table">
 
     <p class="textbox-text">Date of Observation:</p>
