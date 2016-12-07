@@ -7,10 +7,6 @@
 </head>
 <body>
 
-<?php
-//$form = $_GET['form'];
-//?>
-
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1><strong>The Buckthorn Database</strong></h1>
@@ -26,11 +22,32 @@
 <!--        <input type="text" value="--><?php //echo $form; ?><!--"></input>-->
 <!--    </div>-->
 
+<!--Backend for login process-->
+<?php
+//$con = mysqli_connect("localhost") or die("Some error occurred");
+//
+//$query = "show tables";
+//$result = mysqli_query($con, $query);
+//echo $result;
+//
+//?>
+
 <!--  Buttons to Link to Student/Professor Home pages  -->
+<div>
+    <form>
+        <h5 class="login">Username:</h5><input type="text" name="username"/>
+        <br>
+        <br>
+        <h5 class="login">Password:</h5><input type="text" name="password"/>
+    </form>
+</div>
+
+<br>
+<br>
+<div>
     <a href="StudentHome.php"><button>Student</button></a>
     <a href="ProfessorHome.php"><button>Professor</button></a>
-
-
+</div>
 
 <footer>
     <div class="foot-text">
