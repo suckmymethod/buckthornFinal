@@ -10,8 +10,13 @@
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1><strong>Delete an Observation</strong></h1>
-
 </header>
+
+<form>
+    <select>
+<!--        will be filled with array contents from php -->
+    </select>
+</form>
 
 <a href="ProfessorHome.php"><button>Prof Home</button></a>
 

@@ -121,6 +121,10 @@
     <textarea name="Comp-notes" ROWS="3" cols="30"></textarea>
 </form>
 
+<div class="submit btn">
+    <a href="">Submit</a>
+</div>
+
 
 <footer>
     <div class="foot-text">

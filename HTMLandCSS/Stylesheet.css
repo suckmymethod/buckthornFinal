@@ -45,6 +45,7 @@ a:hover{
 
 form{
     background-color:  	#F3F3F3;
+    border-radius: 10px;
     padding: 10px;
     margin: 10px 20px 20px 20px;
 }
@@ -75,4 +76,24 @@ p{
 
 textarea {
     max-width: 100%;
+}
+
+.btn{
+    border-radius: 4px;
+    font-size: .85em;
+    padding: 1em 1em 0.8em 1em;
+    text-align: left;
+    margin: .9em .25em 0em .25em;
+    background-color: #0F2C52;
+    color: #FFFFFF !important;
+    max-width: 45px;
+    font-family: Georgia, serif;
+}
+
+.btn:hover{
+    background-color: #0078a0;
+}
+
+.submit{
+    margin-left: 20px;
 }

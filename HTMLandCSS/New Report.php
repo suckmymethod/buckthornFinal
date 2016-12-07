@@ -13,7 +13,13 @@
 
 </header>
 
-<a href="StudentHome.php"><button>Student Home</button></a>
+<form>
+    <label style="font-family: Georgia, serif">Please enter your report here:</label>
+    <br>
+    <textarea name="report" rows="3" cols="30"></textarea>
+</form>
+
+<a href="StudentHome.php" style="margin-left: 20px;"><button>Student Home</button></a>
 
 <footer>
     <div class="foot-text">
