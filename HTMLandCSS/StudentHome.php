@@ -8,6 +8,7 @@
 <body>
 
 <header>
+    <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1><strong>Welcome to the Student Page</strong></h1>
 </header>
 

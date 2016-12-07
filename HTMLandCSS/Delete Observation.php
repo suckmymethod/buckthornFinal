@@ -8,20 +8,17 @@
 <body>
 
 <header>
+    <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1><strong>Delete an Observation</strong></h1>
-
 </header>
 
-<div>
-    <p>Choose an Observation to Delete</p>
-</div>
+<form>
+    <select>
+<!--        will be filled with array contents from php -->
+    </select>
+</form>
 
-<a href="ProfessorHome.php">
-    <button>Cancel</button>
-</a>
-<a href="ProfessorHome.php">
-    <button>Delete</button>
-</a>
+<a href="ProfessorHome.php"><button>Prof Home</button></a>
 
 <footer>
     <div class="foot-text">

@@ -8,6 +8,7 @@
 <body>
 
 <header>
+    <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1><strong>The Buckthorn Database</strong></h1>
     <h5>Created By: Kyle Larsen, Jon Jarl, Nathan Li</h5>
 </header>

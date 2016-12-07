@@ -4,14 +4,14 @@ body{
 }
 
 header{
-    background-color: black;
+    background-color: #123563;
     color: white;
     margin: -5px -5px 20px -5px;
     padding: 2px;
 }
 
 footer{
-    background-color: black;
+    background-color: #123563;
     color: white;
     margin: 20px -5px -5px -5px;
     padding: 2px;
@@ -49,5 +49,55 @@ a:hover{
 
 form{
     background-color:  	#F3F3F3;
-    padding: 5px;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 20px 20px 20px;
+}
+
+p{
+    font-family: serif;
+}
+
+.logo{
+    float: right;
+    width: 9em;
+    height:40px;
+    padding: 15px;
+}
+
+.table{
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+
+}
+
+.table2{
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+
+textarea {
+    max-width: 100%;
+}
+
+.btn{
+    border-radius: 4px;
+    font-size: .85em;
+    padding: 1em 1em 0.8em 1em;
+    text-align: left;
+    margin: .9em .25em 0em .25em;
+    background-color: #0F2C52;
+    color: #FFFFFF !important;
+    max-width: 45px;
+    font-family: Georgia, serif;
+}
+
+.btn:hover{
+    background-color: #0078a0;
+}
+
+.submit{
+    margin-left: 20px;
 }

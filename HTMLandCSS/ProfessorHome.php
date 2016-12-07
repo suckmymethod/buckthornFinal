@@ -7,6 +7,7 @@
 </head>
 <body>
 <header>
+    <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1><strong>Welcome to the Professor Page</strong></h1>
 </header>
 
