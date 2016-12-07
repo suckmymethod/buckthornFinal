@@ -12,7 +12,16 @@
 
 </header>
 
-<a href="ProfessorHome.php"><button>Prof Home</button></a>
+<div>
+    <p>Choose an Observation to Delete</p>
+</div>
+
+<a href="ProfessorHome.php">
+    <button>Cancel</button>
+</a>
+<a href="ProfessorHome.php">
+    <button>Delete</button>
+</a>
 
 <footer>
     <div class="foot-text">

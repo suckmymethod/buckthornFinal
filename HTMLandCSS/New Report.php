@@ -12,7 +12,9 @@
 
 </header>
 
-<a href="StudentHome.php"><button>Student Home</button></a>
+<a href="StudentHome.php">
+    <button>Student Home</button>
+</a>
 
 <footer>
     <div class="foot-text">
