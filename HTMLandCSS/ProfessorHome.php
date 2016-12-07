@@ -8,19 +8,19 @@
 <body>
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
-    <h1><strong>Welcome to the Professor Page</strong></h1>
+    <h1>Welcome to the Professor Page</h1>
 </header>
 
 
 <div>
     <a href="New Observation.php">
-        <button>New Observation</button>
+        <div class="btn">New Observation</div>
     </a>
     <a href="Delete Observation.php">
-        <button>Delete Observation</button>
+        <div class="btn">Delete Observation</div>
     </a>
     <a href="Update Observation.php">
-        <button>Update Table</button>
+        <div class="btn">Update Table</div>
     </a>
 </div>
 

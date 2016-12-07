@@ -9,25 +9,22 @@
 
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
-    <h1><strong>Update an Observation</strong></h1>
+    <h1>Update an Observation</h1>
 
 </header>
 
 <div>
-    <p>Choose an Observation to Update</p>
-</div>
-
-<form>
-    <select>
+    <p class="left-btn">Choose an Observation to Update:</p>
+    <select class="left-btn">
         <--To be filled with php code-->
     </select>
-</form>
+</div>
 
 <form class="table">
 
     <p class="textbox-text">Date of Observation:</p>
     <input type="text" name="ObservDate"/>
-    <i>(MM/DD/YYYY)</i>
+    <i>(YYYY/MM/DD)</i>
 
     <br>
     <br>
@@ -97,32 +94,37 @@
 </form>
 
 <form class="table">
-    <p class="textbox-text">DBH of Closest Neighbor:</p>
+    <p class="textbox-text">DBH-Closest Neighbor:</p>
     <input type="text" name="DBH"/>
+    <i>m</i>
 
     <br>
     <br>
 
-    <p class="textbox-text">Distance to Closest Neighbor:</p>
+    <p class="textbox-text">Distance-Closest Neighbor:</p>
     <input type="text" name="D-Buck"/>
+    <i>m</i>
 
     <br>
     <br>
 
-    <p class="textbox-text">DBH of Closest Neighbor:</p>
+    <p class="textbox-text">DBH-Closest Neighbor:</p>
     <input type="text" name="DBH-neighbor"/>
+    <i>m</i>
 
     <br>
     <br>
 
-    <p class="textbox-text">Distance to Closest Non-Buckthorn:</p>
+    <p class="textbox-text">Distance-Closest Non-Buckthorn:</p>
     <input type="text" name="D-NonBuck"/>
+    <i>m</i>
 
     <br>
     <br>
 
-    <p class="textbox-text">DBH of Closest Non-Buckthorn:</p>
+    <p class="textbox-text">DBH-Closest Non-Buckthorn:</p>
     <input type="text" name="DBH-nonBuck"/>
+    <i>m</i>
 
     <br>
     <br>
@@ -133,11 +135,13 @@
 </form>
 
 <a href="ProfessorHome.php">
-    <button>Cancel</button>
+    <div class="left-btn btn">Submit</div>
 </a>
+
 <a href="ProfessorHome.php">
-    <button>Submit</button>
+    <div class="btn">Cancel</div>
 </a>
+
 
 <footer>
     <div class="foot-text">

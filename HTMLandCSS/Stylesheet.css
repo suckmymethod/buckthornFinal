@@ -55,7 +55,8 @@ form{
 }
 
 p{
-    font-family: serif;
+    font-family: georgia,serif;
+    font-size: 13px;
 }
 
 .logo{
@@ -90,7 +91,7 @@ textarea {
     margin: .9em .25em 0em .25em;
     background-color: #0F2C52;
     color: #FFFFFF !important;
-    max-width: 45px;
+    display: inline-block;
     font-family: Georgia, serif;
 }
 
@@ -98,6 +99,10 @@ textarea {
     background-color: #0078a0;
 }
 
-.submit{
+.left-btn{
     margin-left: 20px;
+}
+
+h1{
+    font-family: Helvetica;
 }

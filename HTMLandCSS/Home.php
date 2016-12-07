@@ -9,7 +9,7 @@
 
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
-    <h1><strong>The Buckthorn Database</strong></h1>
+    <h1>The Buckthorn Database</h1>
     <h5>Created By: Kyle Larsen, Jon Jarl, Nathan Li</h5>
 </header>
 <!--    <div>-->
@@ -42,11 +42,9 @@
     </form>
 </div>
 
-<br>
-<br>
 <div>
-    <a href="StudentHome.php"><button>Student</button></a>
-    <a href="ProfessorHome.php"><button>Professor</button></a>
+    <a href="StudentHome.php"><div class="btn left-btn">Student</div></a>
+    <a href="ProfessorHome.php"><div class="btn">Instructor</div></a>
 </div>
 
 <footer>
