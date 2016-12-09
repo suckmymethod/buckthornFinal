@@ -9,12 +9,12 @@
 
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
-    <h1><strong>Welcome to the Student Page</strong></h1>
+    <h1>Welcome to the Student Page</h1>
 </header>
 
 <div>
-    <a href="New Observation.php"><button>New Observation</button></a>
-    <a href="New Report.php"><button>New Report</button></a>
+    <a href="New Observation.php"><div class="btn">New Observation</div></a>
+    <a href="New Report.php"><div class="btn">New Report</div></a>
 </div>
 
 
