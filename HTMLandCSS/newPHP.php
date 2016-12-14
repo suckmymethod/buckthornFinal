@@ -2,8 +2,8 @@
 session_start();
 
 $obs = array();
-$BioDiv = array();
-$Comp = array();
+$bioDiv = array();
+$comp = array();
 
 //grab the observation data
 $date = $_POST['ObservDate'];
@@ -25,7 +25,7 @@ $weiner = $_POST['SWI'];
 $BD_notes = $_POST['BD-notes'];
 
 // push the data into biodiversity array
-array_push($BioDiv, $num_species, $weiner, $BD_notes);
+array_push($bioDiv, $num_species, $weiner, $BD_notes);
 
 //grab competition data
 $DBH = $_POST['DBH'];
@@ -36,9 +36,8 @@ $DBH_non_buck = $_POST['DBH-nonBuck'];
 $comp_notes = $_POST['Comp-notes'];
 
 // push data into competition array
-array_push($Comp, $DBH, $D_close, $DBH_close, $D_non_buck,
+array_push($comp, $DBH, $D_close, $DBH_close, $D_non_buck,
 $DBH_non_buck, $comp_notes);
-
 
 header("Location: {$_POST["submit-new"]}");
 ?>
