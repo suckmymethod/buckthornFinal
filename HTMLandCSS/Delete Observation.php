@@ -18,11 +18,12 @@ include('SelectPHP.php');
 
 <form action="DeletePHP.php" method="post">
     <select>
+        <option disabled>Obs Group Date</option>
         <?php
-            while($observations = mysqli_fetch_array($_SESSION['result'])){
-               echo "<option>" . $observations['obs_ID'] . "&nbsp".
-                   $observations['g_ID']. "&nbsp". $observations['date'] . "</option>";
-            }
+        while($observations = mysqli_fetch_array($_SESSION['result'])){
+            echo "<option>" . $observations['obs_ID'] . "&nbsp&nbsp".
+                $observations['g_ID']. "&nbsp&nbsp". $observations['date'] . "</option>";
+        }
         ?>
     </select>
 <a href="ProfessorHome.php">
