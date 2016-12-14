@@ -17,18 +17,16 @@ include('SelectPHP.php');
 
 </header>
 
-<!--<div>-->
-<!--    <p class="left-btn">Choose an Observation to Update:</p>-->
-<!--    <select class="left-btn">-->
-<!--       To be filled with php code-->
-<!--    </select>-->
-<!--</div>-->
-
 <form class="table" action="UpdatePHP.php" method="post">
 
     <p class="left-btn">Choose an Observation to Update:</p>
-    <select class="left-btn">
-        <--To be filled with php code-->
+    <select>
+        <?php
+        while($observations = mysqli_fetch_array($_SESSION['result'])){
+            echo "<option>" . $observations['obs_ID'] . "&nbsp".
+                $observations['g_ID']. "&nbsp". $observations['date'] . "</option>";
+        }
+        ?>
     </select>
 
     <p class="textbox-text">Date of Observation:</p>

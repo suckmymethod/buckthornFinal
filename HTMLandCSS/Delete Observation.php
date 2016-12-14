@@ -20,7 +20,8 @@ include('SelectPHP.php');
     <select>
         <?php
             while($observations = mysqli_fetch_array($_SESSION['result'])){
-               echo "<option>" . $observations['obs_ID'] . "</option>";
+               echo "<option>" . $observations['obs_ID'] . "&nbsp".
+                   $observations['g_ID']. "&nbsp". $observations['date'] . "</option>";
             }
         ?>
     </select>
