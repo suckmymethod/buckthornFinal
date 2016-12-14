@@ -7,11 +7,9 @@ ini_set('display_errors', '1');
 $_SESSION['user'] = $_POST['username'];
 $_SESSION['pass'] = $_POST['password'];
 
-//$con = mysqli_connect("localhost") or die("Some error occurred");
-//
-//$query = "show tables";
-//$result = mysqli_query($con, $query);
-//echo $result;
+$con = mysqli_connect("localhost","username","password","smm") or die("Some error occurred");
+
+
 
 header("Location: {$_POST["redirect"]}");
 ?>
