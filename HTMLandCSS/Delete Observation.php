@@ -17,16 +17,20 @@ include('SelectPHP.php');
 </header>
 
 <form action="DeletePHP.php" method="post">
-    <select>
+    <select name="deleteme">
+        <option disabled>Obs Group Date</option>
         <?php
-            while($observations = mysql_fetch_array($_Session['result'])){
-               echo "<option>" . $observations["obs_ID"] . "<option>";
-            }
+        while($observations = mysqli_fetch_array($_SESSION['result'])){
+            echo "<option>" . $observations['obs_ID'] . ' ' .
+                $observations['g_ID']. ' ' . $observations['date'] . "</option>";
+        }
         ?>
     </select>
-<a href="ProfessorHome.php">
-    <div class="btn left-btn">Submit</div>
-</a>
+    <input class="btn" type="submit" value="Submit"/>
+    <input type="hidden" name="redirect" value="ProfessorHome.php"/>
+<!-- <a href="ProfessorHome.php">
+    <div class="btn left-btn" type = "submit">Submit</div>
+</a> -->
 <a href="ProfessorHome.php">
     <div class="btn">Cancel</div>
 </a>
