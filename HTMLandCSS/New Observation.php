@@ -12,6 +12,18 @@
     <h1>Create New Observation</h1>
 </header>
 
+<label class="left-btn">Select Group:</label>
+<select class="left-btn">
+    <option>The Veterans</option>
+    <option>Green Thumbs</option>
+    <option>Bio Bosses</option>
+    <option>Buckthorn Biologists</option>
+    <option>The Right Pack</option>
+    <option>httpster Scientists</option>
+    <option>Biothorns</option>
+    <option>Team Squared</option>
+</select>
+
 <form class="table" action="newPHP.php" method="post">
 
     <label><strong><i>Observation</i></strong></label>
