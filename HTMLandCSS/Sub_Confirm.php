@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Buckthorn|Home</title>
+    <title>Submission</title>
     <link rel="stylesheet" href="Stylesheet.css" type="text/css">
 </head>
+
 <body>
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
-    <h1>Welcome to the Homepage</h1>
+    <h1>Confirmation Page</h1>
+
 </header>
 
-<div>
-    <a href="StudentHome.php">
-        <div class="btn">Student</div>
-    </a>
-    <a href="ProfessorHome.php">
-        <div class="btn">Instructor</div>
-    </a>
-</div>
+<p class="left-btn">Thanks for your submission. The data has been saved.</p>
+<br>
+<a href="Home.php">
+    <div class="btn left-btn">Home</div>
+</a>
 
 <footer>
     <div class="foot-text">

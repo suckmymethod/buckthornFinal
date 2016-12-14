@@ -12,8 +12,11 @@
     <h1>Create New Observation</h1>
 </header>
 
-<form class="table">
+<form class="table" action="newPHP.php" method="post">
 
+    <label><strong><i>Observation</i></strong></label>
+    <br>
+    <hr>
     <p class="textbox-text">Date of Observation:</p>
     <input type="text" name="ObservDate"/>
     <i>(YYYY/MM/DD)</i>
@@ -64,10 +67,12 @@
     <p class="textbox-text">Notes:</p>
     <br>
     <textarea name="obs-notes" ROWS="3" cols="30"></textarea>
+    <br>
+    <br>
+    <label><strong><i>BioDiversity</i></strong></label>
+    <br>
+    <hr>
 
-</form>
-
-<form class="table2">
     <p class="textbox-text">Enter the Number of Species:</p>
     <input type="text" name="NumSpecies"/>
 
@@ -80,13 +85,17 @@
     <br>
     <br>
 
-    <p class="textbox-text">Notes</p>
+    <p class="textbox-text">Notes:</p>
     <br>
     <textarea name="BD-notes" ROWS="3" cols="30"></textarea>
-</form>
+    <br>
+    <br>
 
-<form class="table">
-    <p class="textbox-text">DBH-Closest Neighbor:</p>
+    <label><strong><i>Competition</i></strong></label>
+    <br>
+    <hr>
+
+    <p class="textbox-text">Diameter-Breast Height(DBH):</p>
     <input type="text" name="DBH"/>
     <i>m</i>
 
@@ -100,12 +109,12 @@
     <br>
     <br>
 
-    <p class="textbox-text">DBH-Closest Neighbor:</p>
-    <input type="text" name="DBH-neighbor"/>
-    <i>m</i>
+        <p class="textbox-text">DBH-Closest-Neighbor:</p>
+        <input type="text" name="DBH-neighbor"/>
+        <i>m</i>
 
-    <br>
-    <br>
+        <br>
+        <br>
 
     <p class="textbox-text">Distance-Closest Non-Buckthorn:</p>
     <input type="text" name="D-NonBuck"/>
@@ -124,14 +133,13 @@
     <p class="textbox-text">Notes:</p>
     <br>
     <textarea name="Comp-notes" ROWS="3" cols="30"></textarea>
+
+
+    <input style="float: right" class="btn" type="submit" value="Submit"/>
+    <input type="hidden" name="submit-new" value="Home.php"/>
 </form>
-
-
-<a href="">
-    <div class="left-btn btn">Submit</div>
-</a>
 <a href="Home.php">
-    <div class="btn">Cancel</div>
+    <div class="btn left-btn">Cancel</div>
 </a>
 
 <footer>
