@@ -42,8 +42,6 @@ $comp_notes = $_POST['Comp-notes'];
 array_push($comp, $DBH, $D_close, $DBH_close, $D_non_buck,
     $DBH_non_buck, $comp_notes);
 
-
-
-
+// link to submission confirm page
 header("Location: {$_POST["submit-new"]}");
 ?>
