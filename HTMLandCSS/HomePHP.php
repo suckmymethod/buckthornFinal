@@ -9,7 +9,5 @@ $_SESSION['pass'] = $_POST['password'];
 
 $con = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
 
-
-
 header("Location: {$_POST["redirect"]}");
 ?>
