@@ -16,8 +16,8 @@ include('SelectPHP.php');
     <h1>Delete an Observation</h1>
 </header>
 
-<form action="DeletePHP.php" method="post">
-    <select>
+<form action="DeletePHP.php" method="POST">
+    <select name="to_delete">
         <option disabled>Obs Group Date</option>
         <?php
         while($observations = mysqli_fetch_array($_SESSION['result'])){
