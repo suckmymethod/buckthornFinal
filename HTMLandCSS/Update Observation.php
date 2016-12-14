@@ -20,7 +20,7 @@ include('SelectPHP.php');
 <!--<div>-->
 <!--    <p class="left-btn">Choose an Observation to Update:</p>-->
 <!--    <select class="left-btn">-->
-<!--        <--To be filled with php code-->-->
+<!--       To be filled with php code-->
 <!--    </select>-->
 <!--</div>-->
 
