@@ -17,20 +17,18 @@ include('SelectPHP.php');
 
 </header>
 
-<!--<div>-->
-<!--    <p class="left-btn">Choose an Observation to Update:</p>-->
-<!--    <select class="left-btn">-->
-<!--       To be filled with php code-->
-<!--    </select>-->
-<!--</div>-->
+<div>
+    <p class="left-btn">Choose an Observation to Update:</p>
+    <select class="left-btn">
+       To be filled with php code
+    </select>
+</div>
 
 <form class="table" action="UpdatePHP.php" method="post">
 
-    <p class="left-btn">Choose an Observation to Update:</p>
-    <select class="left-btn">
-        <--To be filled with php code-->
-    </select>
-
+    <label><strong><i>Observation</i></strong></label>
+    <br>
+    <hr>
     <p class="textbox-text">Date of Observation:</p>
     <input type="text" name="ObservDate"/>
     <i>(YYYY/MM/DD)</i>
@@ -81,10 +79,12 @@ include('SelectPHP.php');
     <p class="textbox-text">Notes:</p>
     <br>
     <textarea name="obs-notes" ROWS="3" cols="30"></textarea>
+    <br>
+    <br>
+    <label><strong><i>BioDiversity</i></strong></label>
+    <br>
+    <hr>
 
-</form>
-
-<form class="table2">
     <p class="textbox-text">Enter the Number of Species:</p>
     <input type="text" name="NumSpecies"/>
 
@@ -97,13 +97,17 @@ include('SelectPHP.php');
     <br>
     <br>
 
-    <p class="textbox-text">Notes</p>
+    <p class="textbox-text">Notes:</p>
     <br>
     <textarea name="BD-notes" ROWS="3" cols="30"></textarea>
-</form>
+    <br>
+    <br>
 
-<form class="table">
-    <p class="textbox-text">DBH-Closest Neighbor:</p>
+    <label><strong><i>Competition</i></strong></label>
+    <br>
+    <hr>
+
+    <p class="textbox-text">Diameter-Breast Height(DBH):</p>
     <input type="text" name="DBH"/>
     <i>m</i>
 
@@ -117,7 +121,7 @@ include('SelectPHP.php');
     <br>
     <br>
 
-    <p class="textbox-text">DBH-Closest Neighbor:</p>
+    <p class="textbox-text">DBH-Closest-Neighbor:</p>
     <input type="text" name="DBH-neighbor"/>
     <i>m</i>
 
@@ -141,6 +145,10 @@ include('SelectPHP.php');
     <p class="textbox-text">Notes:</p>
     <br>
     <textarea name="Comp-notes" ROWS="3" cols="30"></textarea>
+
+
+    <input style="float: right" class="btn" type="submit" value="Submit"/>
+    <input type="hidden" name="submit-new" value="Sub_Confirm.php"/>
 </form>
 
 <a href="ProfessorHome.php">
