@@ -130,7 +130,7 @@
 <a href="">
     <div class="left-btn btn">Submit</div>
 </a>
-<a href="ProfessorHome.php">
+<a href="Home.php">
     <div class="btn">Cancel</div>
 </a>
 
