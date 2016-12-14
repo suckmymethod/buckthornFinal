@@ -1,6 +1,3 @@
-<?php
-include('Pre_Report.php');
-?>
 <!DOCTYPE html>
 <html>
 <head>

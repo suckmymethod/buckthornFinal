@@ -1,3 +1,6 @@
+<?php
+include('Pre_load.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
