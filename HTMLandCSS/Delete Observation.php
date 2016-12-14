@@ -1,3 +1,7 @@
+<?php
+include('SelectPHP.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,19 +16,21 @@
     <h1>Delete an Observation</h1>
 </header>
 
-<form>
+<form action="DeletePHP.php" method="post">
     <select>
-<!--        will be filled with array contents from php -->
+        <?php
+            while($observations = mysql_fetch_array($_Session['result'])){
+               echo "<option><option>";
+            }
+        ?>
     </select>
-</form>
-
-
 <a href="ProfessorHome.php">
     <div class="btn left-btn">Submit</div>
 </a>
 <a href="ProfessorHome.php">
     <div class="btn">Cancel</div>
 </a>
+</form>
 
 
 <footer>

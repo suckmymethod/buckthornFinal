@@ -1,3 +1,7 @@
+<?php
+include('SelectPHP.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,14 +17,19 @@
 
 </header>
 
-<div>
+<!--<div>-->
+<!--    <p class="left-btn">Choose an Observation to Update:</p>-->
+<!--    <select class="left-btn">-->
+<!--        <--To be filled with php code-->-->
+<!--    </select>-->
+<!--</div>-->
+
+<form class="table" action="UpdatePHP.php" method="post">
+
     <p class="left-btn">Choose an Observation to Update:</p>
     <select class="left-btn">
         <--To be filled with php code-->
     </select>
-</div>
-
-<form class="table">
 
     <p class="textbox-text">Date of Observation:</p>
     <input type="text" name="ObservDate"/>
