@@ -11,4 +11,5 @@ $reportArray = array(
 
 $_SESSION['reports'] = $reportArray;
 
+
 ?>
