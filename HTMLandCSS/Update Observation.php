@@ -16,16 +16,16 @@ include('SelectPHP.php');
     <h1>Update an Observation</h1>
 
 </header>
-
+  
 <form class="table" action="UpdatePHP.php" method="post">
 
     <p>Choose an Observation to Update:</p>
     <select>
         <option disabled>Obs Group Date</option>
         <?php
-        while ($observations = mysqli_fetch_array($_SESSION['result'])) {
-            echo "<option>" . $observations['obs_ID'] . "&nbsp&nbsp" .
-                $observations['g_ID'] . "&nbsp&nbsp" . $observations['date'] . "</option>";
+        while($observations = mysqli_fetch_array($_SESSION['result'])){
+            echo "<option>" . $observations['obs_ID'] . "&nbsp&nbsp".
+                $observations['g_ID']. "&nbsp&nbsp". $observations['date'] . "</option>";
         }
         ?>
 
@@ -33,143 +33,143 @@ include('SelectPHP.php');
     <br>
     <br>
 
-    <form class="table" action="UpdatePHP.php" method="post">
+<form class="table" action="UpdatePHP.php" method="post">
 
-        <label><strong><i>Observation</i></strong></label>
-        <br>
-        <hr>
-        <p class="textbox-text">Date of Observation:</p>
-        <input type="text" name="ObservDate"/>
-        <i>(YYYY/MM/DD)</i>
+    <label><strong><i>Observation</i></strong></label>
+    <br>
+    <hr>
+    <p class="textbox-text">Date of Observation:</p>
+    <input type="text" name="ObservDate"/>
+    <i>(YYYY/MM/DD)</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Quadrant location:</p>
-        <input type="text" name="quad-N" class="textbox-text"/><i>N</i>
-        <input style="margin-left: 5px;" type="text" name="quad-W" class="textbox-text"/><i>W</i>
+    <p class="textbox-text">Quadrant location:</p>
+    <input type="text" name="quad-N" class="textbox-text"/><i>N</i>
+    <input style="margin-left: 5px;" type="text" name="quad-W" class="textbox-text"/><i>W</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
-        <i>m^2</i>
+    <p class="textbox-text">Quadrant size:</p><input type="text" name="QuadSize"/>
+    <i>m^2</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Buckthorn Stem Count:</p>
-        <input type="text" name="stem-count"/>
+    <p class="textbox-text">Buckthorn Stem Count:</p>
+    <input type="text" name="stem-count"/>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Foliar Coverage:</p>
-        <input type="text" name="foliar-cov"/>
-        <i>%</i>
+    <p class="textbox-text">Foliar Coverage:</p>
+    <input type="text" name="folilar-cov"/>
+    <i>%</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Stem Circumference:</p>
-        <input type="text" name="stem-circum"/>
-        <i>cm</i>
+    <p class="textbox-text">Stem Circumference:</p>
+    <input type="text" name="stem-circum"/>
+    <i>cm</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Habitat Description:</p>
-        <br>
-        <textarea name="Habitat" ROWS="3" cols="30"></textarea>
+    <p class="textbox-text">Habitat Description:</p>
+    <br>
+    <textarea name="Habitat" ROWS="3" cols="30"></textarea>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Notes:</p>
-        <br>
-        <textarea name="obs-notes" ROWS="3" cols="30"></textarea>
-        <br>
-        <br>
-        <label><strong><i>BioDiversity</i></strong></label>
-        <br>
-        <hr>
+    <p class="textbox-text">Notes:</p>
+    <br>
+    <textarea name="obs-notes" ROWS="3" cols="30"></textarea>
+    <br>
+    <br>
+    <label><strong><i>BioDiversity</i></strong></label>
+    <br>
+    <hr>
 
-        <p class="textbox-text">Enter the Number of Species:</p>
-        <input type="text" name="NumSpecies"/>
+    <p class="textbox-text">Enter the Number of Species:</p>
+    <input type="text" name="NumSpecies"/>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Shanon Weiner Index:</p>
-        <input type="text" name="SWI"/>
+    <p class="textbox-text">Shanon Weiner Index:</p>
+    <input type="text" name="SWI"/>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Notes:</p>
-        <br>
-        <textarea name="BD-notes" ROWS="3" cols="30"></textarea>
-        <br>
-        <br>
+    <p class="textbox-text">Notes:</p>
+    <br>
+    <textarea name="BD-notes" ROWS="3" cols="30"></textarea>
+    <br>
+    <br>
 
-        <label><strong><i>Competition</i></strong></label>
-        <br>
-        <hr>
+    <label><strong><i>Competition</i></strong></label>
+    <br>
+    <hr>
 
-        <p class="textbox-text">Diameter-Breast Height(DBH):</p>
-        <input type="text" name="DBH"/>
-        <i>m</i>
+    <p class="textbox-text">Diameter-Breast Height(DBH):</p>
+    <input type="text" name="DBH"/>
+    <i>m</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Distance-Closest Neighbor:</p>
-        <input type="text" name="D-Buck"/>
-        <i>m</i>
+    <p class="textbox-text">Distance-Closest Neighbor:</p>
+    <input type="text" name="D-Buck"/>
+    <i>m</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">DBH-Closest-Neighbor:</p>
-        <input type="text" name="DBH-neighbor"/>
-        <i>m</i>
+    <p class="textbox-text">DBH-Closest-Neighbor:</p>
+    <input type="text" name="DBH-neighbor"/>
+    <i>m</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Distance-Closest Non-Buckthorn:</p>
-        <input type="text" name="D-NonBuck"/>
-        <i>m</i>
+    <p class="textbox-text">Distance-Closest Non-Buckthorn:</p>
+    <input type="text" name="D-NonBuck"/>
+    <i>m</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">DBH-Closest Non-Buckthorn:</p>
-        <input type="text" name="DBH-nonBuck"/>
-        <i>m</i>
+    <p class="textbox-text">DBH-Closest Non-Buckthorn:</p>
+    <input type="text" name="DBH-nonBuck"/>
+    <i>m</i>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
-        <p class="textbox-text">Notes:</p>
-        <br>
-        <textarea name="Comp-notes" ROWS="3" cols="30"></textarea>
-
-
-        <input style="float: right" class="btn" type="submit" value="Submit"/>
-        <input type="hidden" name="submit-new" value="Sub_Confirm.php"/>
-    </form>
-
-    <a href="ProfessorHome.php">
-        <div class="btn">Cancel</div>
-    </a>
+    <p class="textbox-text">Notes:</p>
+    <br>
+    <textarea name="Comp-notes" ROWS="3" cols="30"></textarea>
 
 
-    <footer>
-        <div class="foot-text">
-            <a href="Home.php"><p>Home</p></a>
-            <p class="foot-CR">© SMM 2016</p>
-        </div>
-    </footer>
+    <input style="float: right" class="btn" type="submit" value="Submit"/>
+    <input type="hidden" name="submit-new" value="Sub_Confirm.php"/>
+</form>
+
+<a href="ProfessorHome.php">
+    <div class="btn">Cancel</div>
+</a>
+
+
+<footer>
+    <div class="foot-text">
+        <a href="Home.php"><p>Home</p></a>
+        <p class="foot-CR">© SMM 2016</p>
+    </div>
+</footer>
 </body>
 </html>
