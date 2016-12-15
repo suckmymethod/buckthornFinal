@@ -18,7 +18,7 @@ include('SelectPHP.php');
 
 <form action="DeletePHP.php" method="post">
     <select name="deleteme">
-        <option disabled>Obs Group Date</option>
+        <option disabled>Obs Group Date</option disabled>
         <?php
         while($observations = mysqli_fetch_array($_SESSION['result'])){
             echo "<option>" . $observations['obs_ID'] . ' ' .
@@ -27,10 +27,8 @@ include('SelectPHP.php');
         ?>
     </select>
     <input class="btn" type="submit" value="Submit"/>
-    <input type="hidden" name="redirect" value="ProfessorHome.php"/>
-<!-- <a href="ProfessorHome.php">
-    <div class="btn left-btn" type = "submit">Submit</div>
-</a> -->
+    <input type="hidden" name="redirect" value="Del_Confirm.php"/>
+
 <a href="ProfessorHome.php">
     <div class="btn">Cancel</div>
 </a>
