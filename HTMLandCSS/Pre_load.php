@@ -11,4 +11,18 @@ $reportArray = array(
 
 $_SESSION['reports'] = $reportArray;
 
+
+$teamNames = array(
+    0 => "The Veterans",
+    1 => "Green Thumbs",
+    2 => "Bio Bosses",
+    3 => "Buckthorn Biologists",
+    4 => "The Right Pack",
+    5 => "httpster Scientists",
+    6 => "Biothorns",
+    7 => "Team Squared"
+);
+
+$_SESSION['teams'] = $teamNames;
+
 ?>

@@ -14,14 +14,13 @@
 
 <label class="left-btn">Select Group:</label>
 <select class="left-btn">
-    <option>The Veterans</option>
-    <option>Green Thumbs</option>
-    <option>Bio Bosses</option>
-    <option>Buckthorn Biologists</option>
-    <option>The Right Pack</option>
-    <option>httpster Scientists</option>
-    <option>Biothorns</option>
-    <option>Team Squared</option>
+    <?php
+        session_start();
+
+        for($i = 0; $i < count($_SESSION['teams']); $i++){
+            print_r("<option>".$_SESSION['teams'][$i]."</option>");
+        }
+    ?>
 </select>
 
 <form class="table" action="newPHP.php" method="post">
