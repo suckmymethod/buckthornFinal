@@ -148,6 +148,7 @@
 
     <input style="float: right" class="btn" type="submit" value="Submit"/>
     <input type="hidden" name="submit-new" value="Sub_Confirm.php"/>
+    <input type="hidden" name="error" value="oops.php"/>
 </form>
 <a href="Home.php">
     <div class="btn left-btn">Cancel</div>
