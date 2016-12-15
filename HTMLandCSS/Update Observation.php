@@ -160,7 +160,7 @@ include('SelectPHP.php');
 </form>
 
 <a href="ProfessorHome.php">
-    <div class="btn">Cancel</div>
+    <div class="btn left-btn">Cancel</div>
 </a>
 
 

@@ -8,7 +8,7 @@ try{
   $comp = array();
 
   //grab the observation data
-  $date = (DateTime)$_POST['ObservDate'];
+  $date = (string)$_POST['ObservDate'];
   $quad_GPS = $_POST['quad-N']."'".$_POST['quad-W']."''";
   $quad_size = (float)$_POST['QuadSize'];
   $stem_count = (int)$_POST['stem-count'];
@@ -41,7 +41,7 @@ try{
   array_push($comp, $DBH, $D_close, $DBH_close, $D_non_buck,
   $DBH_non_buck, $comp_notes);
 } catch (Exception $e) {
-  //error handling goes here
+  header("Location: {$_POST["error"]}");
 }
 //^^^^all this pulls vars from the webpage to be placed into the database
 
