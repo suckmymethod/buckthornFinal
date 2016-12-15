@@ -45,11 +45,11 @@ try{
   array_push($comp, $DBH, $D_close, $DBH_close, $D_non_buck,
   $DBH_non_buck, $comp_notes);
 
-  $obs_query = "insert into observations " . "1" . ", " . "2" . ", " . $date . ", " . $quad_GPS . ", " . $quad_size . ", " . $stem_count . ", ";
+  $obs_query = "insert into observations " . "1" . ", " . "2" . ", " . $date . ", " . $quad_GPS . ", " . $quad_size . ", " . $stem_count . ", "
       . ".5" . ", " . $fol_cov . ", " . $circumference . ", " . $habitat . ", " . $obs_notes . ";";
   $bio_query = "insert into biodiversity " . "1" . ", " . $date . ", " . $weiner . ", " . $BD_notes . ";";
 //  $spec_query =  "insert into species " .
-  $comp_query = "insert into competition " . "1" . ", " . "2" . ", " $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
+  $comp_query = "insert into competition " . "1" . ", " . "2" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
       . $D_non_buck . ", " . $DBH_non_buck . ", " . $comp_notes . ";";
 
   //we have the queries, now to execute
