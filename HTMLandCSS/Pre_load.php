@@ -1,4 +1,4 @@
-<?php
+<?php // this file is for pre-existing things before entry
 session_start();
 
 
