@@ -16,13 +16,20 @@ include('SelectPHP.php');
     <h1>Update an Observation</h1>
 
 </header>
+  
+<form class="table" action="UpdatePHP.php" method="post">
 
-<div>
     <p class="left-btn">Choose an Observation to Update:</p>
-    <select class="left-btn">
-       To be filled with php code
+    <select>
+        <option disabled>Obs Group Date</option>
+        <?php
+        while($observations = mysqli_fetch_array($_SESSION['result'])){
+            echo "<option>" . $observations['obs_ID'] . "&nbsp&nbsp".
+                $observations['g_ID']. "&nbsp&nbsp". $observations['date'] . "</option>";
+        }
+        ?>
+
     </select>
-</div>
 
 <form class="table" action="UpdatePHP.php" method="post">
 
@@ -150,10 +157,6 @@ include('SelectPHP.php');
     <input style="float: right" class="btn" type="submit" value="Submit"/>
     <input type="hidden" name="submit-new" value="Sub_Confirm.php"/>
 </form>
-
-<a href="ProfessorHome.php">
-    <div class="left-btn btn">Submit</div>
-</a>
 
 <a href="ProfessorHome.php">
     <div class="btn">Cancel</div>
