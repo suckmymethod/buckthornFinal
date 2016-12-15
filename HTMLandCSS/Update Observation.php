@@ -14,7 +14,6 @@ include('SelectPHP.php');
 <header>
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1>Update an Observation</h1>
-
 </header>
 
 <form class="table" action="UpdatePHP.php" method="post">
