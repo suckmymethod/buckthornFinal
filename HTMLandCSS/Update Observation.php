@@ -19,7 +19,7 @@ include('SelectPHP.php');
   
 <form class="table" action="UpdatePHP.php" method="post">
 
-    <p class="left-btn">Choose an Observation to Update:</p>
+    <p>Choose an Observation to Update:</p>
     <select>
         <option disabled>Obs Group Date</option>
         <?php
@@ -30,6 +30,8 @@ include('SelectPHP.php');
         ?>
 
     </select>
+    <br>
+    <br>
 
 <form class="table" action="UpdatePHP.php" method="post">
 
