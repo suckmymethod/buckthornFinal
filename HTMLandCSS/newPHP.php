@@ -10,6 +10,9 @@ try{
   //TODO
   // we need a way to get the group ID from the select menu in order to properly associate new observations with their respective groups.
   // add density field in UI
+  // unique observation ibase_add_user
+
+
 
   //grab the observation data
   $date = $_POST['ObservDate'];
@@ -45,15 +48,25 @@ try{
   array_push($comp, $DBH, $D_close, $DBH_close, $D_non_buck,
   $DBH_non_buck, $comp_notes);
 
-  $obs_query = "insert into observations " . "1" . ", " . "2" . ", " . $date . ", " . $quad_GPS . ", " . $quad_size . ", " . $stem_count . ", "
-      . ".5" . ", " . $fol_cov . ", " . $circumference . ", " . $habitat . ", " . $obs_notes . ";";
-  $bio_query = "insert into biodiversity " . "1" . ", " . $date . ", " . $weiner . ", " . $BD_notes . ";";
-//  $spec_query =  "insert into species " .
-  $comp_query = "insert into competition " . "1" . ", " . "2" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
-      . $D_non_buck . ", " . $DBH_non_buck . ", " . $comp_notes . ";";
-
-  //we have the queries, now to execute
   $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
+
+
+  $obs_query = "insert into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) values ("
+  . "7" . ", " . "12" . ", " . $date . ", \"" . $quad_GPS . "\", " . $quad_size . ", " . $stem_count . ", "
+      . ".5" . ", " . $fol_cov . ", " . $circumference . ", \"" . $habitat . "\", \"" . $obs_notes . "\");";
+
+  $bio_query = "insert into biodiversity(obs_ID, date, weiner_index, notes) values ("
+  . "7" . ", " . $date . ", " . $weiner . ", \"" . $BD_notes . "\");";
+  
+//  $spec_query =  "insert into species " .
+  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) values ("
+  . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
+      . $D_non_buck . ", " . $DBH_non_buck . ", \"" . $comp_notes . "\");";
+
+  echo $obs_query . "\n";
+  echo $bio_query . "\n";
+  echo $comp_query . "\n";
+  //we have the queries, now to execute
   mysqli_query($recon, $obs_query);
   mysqli_query($recon, $bio_query);
   //TODO mysqli_query($recon, $spec_query);
@@ -62,7 +75,7 @@ try{
 
 
   // redirect to submission/confirm pages
-  header("Location: {$_POST["submit-new"]}");
+  //header("Location: {$_POST["submit-new"]}");
 } catch (Exception $e) {
   //header("Location: {$_POST["error"]}");
 }
