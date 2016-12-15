@@ -27,7 +27,7 @@ include('SelectPHP.php');
         ?>
     </select>
     <input class="btn" type="submit" value="Submit"/>
-    <input type="hidden" name="redirect" value="ProfessorHome.php"/>
+    <input type="hidden" name="redirect" value="Del_Confirm.php"/>
 <!-- <a href="ProfessorHome.php">
     <div class="btn left-btn" type = "submit">Submit</div>
 </a> -->
