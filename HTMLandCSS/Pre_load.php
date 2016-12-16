@@ -1,6 +1,8 @@
 <?php // this file is for pre-existing things before entry
 session_start();
 
+// load in login page, start with these reports as a basis
+// Never actually used besides being tacked onto for the sesssion
 
 $reportArray = array(
     0 => "List all student researchers",

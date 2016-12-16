@@ -19,6 +19,7 @@
     <br>
     <input type="submit" class="btn" value="Submit"/>
     <input type="hidden" name="redirect" value="Sub_Confirm.php"/>
+    <input type="hidden" name="oops" value="oops.php"/>
 </form>
 
 <footer>

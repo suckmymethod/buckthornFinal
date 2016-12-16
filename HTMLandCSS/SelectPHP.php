@@ -1,4 +1,6 @@
 <?php
+
+// selects the observations for the select boxes on the update page and delete page
 session_start();
 
 error_reporting(E_ALL);
