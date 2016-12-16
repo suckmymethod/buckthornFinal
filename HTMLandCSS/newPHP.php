@@ -22,6 +22,7 @@ try{
   $quad_GPS = $_POST['quad-N']."N ".$_POST['quad-W']."W";
   $quad_size = (float)$_POST['QuadSize'];
   $stem_count = (int)$_POST['stem-count'];
+  $density = (float)$_POST['density'];
   $fol_cov = (float)$_POST['foliar-cov'];
   $circumference = (int)$_POST['stem-circum'];
   $habitat = $_POST['Habitat'];
@@ -60,12 +61,13 @@ try{
   $groupID = mysqli_fetch_row(mysqli_query($recon, "select g_ID from groups where g_name = $groupName"))[0];
 
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
-($ID_num, $groupID,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
+($ID_num,$groupID,'$date','$quad_GPS',$quad_size,$stem_count,$density,$fol_cov,$circumference,'$habitat','$obs_notes')";
 
   $bio_query = "insert into biodiversity(obs_ID, date, weiner_index,notes) VALUES ($ID_num,'$date',$weiner,'$BD_notes')";
 
   $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES
-($groupID,$ID_num,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
+($groupID,$ID_num,'$date',$DBH,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
+
 
   //we have the queries, now to execute
   mysqli_query($recon, $obs_query);
@@ -73,7 +75,7 @@ try{
   //TODO mysqli_query($recon, $spec_query);
   mysqli_query($recon, $comp_query);
   // redirect to submission/confirm pages
-  //header("Location: {$_POST["submit-new"]}");
+  header("Location: {$_POST["submit-new"]}");
 } catch (Exception $e) {
   header("Location: {$_POST["error"]}");
 }
