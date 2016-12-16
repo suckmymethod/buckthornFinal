@@ -8,13 +8,6 @@ try{
   $bioDiv = array();
   $comp = array();
 
-  //TODO
-  // we need a way to get the group ID from the select menu in order to properly associate new observations with their respective groups.
-  // add density field in UI
-  // unique observation ibase_add_user
-
-
-
   //grab the observation data
   $date = $_POST['ObservDate'];
   //if date is empty throw error, etc for other fields
