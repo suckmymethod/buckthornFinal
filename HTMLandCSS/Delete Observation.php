@@ -1,4 +1,5 @@
 <?php
+// loading the items for the select box
 include('SelectPHP.php');
 ?>
 
@@ -20,18 +21,20 @@ include('SelectPHP.php');
     <select name="deleteme">
         <option disabled>Obs Group Date</option disabled>
         <?php
-        while($observations = mysqli_fetch_array($_SESSION['result'])){
+        // creates the option tags for all the observations in the database
+        while ($observations = mysqli_fetch_array($_SESSION['result'])) {
             echo "<option>" . $observations['obs_ID'] . ' ' .
-                $observations['g_ID']. ' ' . $observations['date'] . "</option>";
+                $observations['g_ID'] . ' ' . $observations['date'] . "</option>";
         }
         ?>
     </select>
     <input class="btn" type="submit" value="Submit"/>
     <input type="hidden" name="redirect" value="Del_Confirm.php"/>
+    <input type="hidden" name="oops" value="oops.php"/>
 
-<a href="ProfessorHome.php">
-    <div class="btn">Cancel</div>
-</a>
+    <a href="ProfessorHome.php">
+        <div class="btn">Cancel</div>
+    </a>
 </form>
 
 

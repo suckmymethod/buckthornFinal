@@ -3,11 +3,6 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors','1');
 
-
-$obs = array();
-$bioDiv = array();
-$comp = array();
-
 //grab the observation data
 $date = $_POST['ObservDate'];
 $quad_GPS = $_POST['quad-N']."'".$_POST['quad-W']."''";

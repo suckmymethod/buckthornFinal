@@ -5,7 +5,7 @@ include('Pre_load.php');
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Buckthorn|Home</title>
+    <title>Buckthorn|Login</title>
     <link rel="stylesheet" href="Stylesheet.css" type="text/css">
 </head>
 <body>

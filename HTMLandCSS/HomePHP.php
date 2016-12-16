@@ -4,6 +4,8 @@ session_start();
 error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
+
+// connection to the server with proper credentials
 $_SESSION['user'] = $_POST['username'];
 $_SESSION['pass'] = $_POST['password'];
 

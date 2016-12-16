@@ -19,6 +19,7 @@
   <label class="left-btn">Select Group:</label>
   <select class="left-btn" name="group-name">
       <?php
+        // fetches the groups for the group selection box
         while($groups = mysqli_fetch_array($_SESSION['groups'])){
           echo "<option>" . $groups['g_name'] ."</option>";
         }

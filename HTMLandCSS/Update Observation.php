@@ -16,32 +16,31 @@ include('SelectPHP.php');
     <h1>Update an Observation</h1>
 </header>
 
-<form class="table" action="UpdatePHP.php" method="post">
 
+<form action="" method="post">
     <p>Choose an Observation to Update:</p>
     <select name="PickedObs">
         <option disabled>Obs Group Date</option>
         <?php
-        while($observations = mysqli_fetch_array($_SESSION['result'])){
+        while ($observations = mysqli_fetch_array($_SESSION['result'])) {
             $obs_ID = $observations['obs_ID'];
-            echo "<option value='$obs_ID'>" . $observations['obs_ID'] . "&nbsp&nbsp".
-                $observations['g_ID']. "&nbsp&nbsp". $observations['date'] . "</option>";
-        }
-
-        if($_POST['PickedObs'] == 1){
-
+            echo "<option value='$obs_ID'>" . $observations['obs_ID'] . "&nbsp&nbsp" .
+                $observations['g_ID'] . "&nbsp&nbsp" . $observations['date'] . "</option>";
         }
         ?>
 
     </select>
-    <br>
-    <br>
+    <input class="btn left-btn" type="submit" value="Select"/>
+</form>
+
+<form class="table" action="UpdatePHP.php" method="post">
+
 
     <label><strong><i>Observation</i></strong></label>
     <br>
     <hr>
     <p class="textbox-text">Date of Observation:</p>
-    <input type="text" name="ObservDate"/>
+    <input type="text" value="<?php echo $_SESSION['obs']['date']; ?>" name="ObservDate"/>
     <i>(YYYY-MM-DD)</i>
 
     <br>

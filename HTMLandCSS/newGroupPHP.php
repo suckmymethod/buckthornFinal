@@ -1,9 +1,15 @@
 <?php
 session_start();
 
-$new = $_POST['newGroup'];
+try {
 
-array_push($_SESSION['teams'], $new);
+    $new = $_POST['newGroup'];
 
-header("Location: {$_POST["redirect"]}");
+    array_push($_SESSION['teams'], $new);
+
+    header("Location: {$_POST["redirect"]}");
+
+}catch(Exception $e){
+    header("Location: {$_POST["oops"]}");
+}
 ?>
