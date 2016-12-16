@@ -15,8 +15,6 @@
 <div>
     <a href="New Observation.php"><div class="btn">New Observation</div></a>
     <a href="New Report.php"><div class="btn">New Report</div></a>
-    <a href="New_Group.php"><div class="btn">Add Group</div></a>
-
 </div>
 
 

@@ -22,6 +22,10 @@
     <a href="Update Observation.php">
         <div class="btn">Update Table</div>
     </a>
+    <a href="New_Group.php">
+        <div class="btn">Add Group</div>
+    </a>
+
 </div>
 
 <footer>
