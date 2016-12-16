@@ -26,7 +26,7 @@
     <hr>
     <p class="textbox-text">Date of Observation:</p>
     <input type="text" name="ObservDate"/>
-    <i>(YYYY/MM/DD)</i>
+    <i>(YYYY-MM-DD)</i>
 
     <br>
     <br>
