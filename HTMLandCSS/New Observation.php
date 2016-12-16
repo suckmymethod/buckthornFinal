@@ -50,6 +50,12 @@
     <br>
     <br>
 
+    <p class="textbox-text">Density:</p>
+    <input type="text" name="density"/>
+
+    <br>
+    <br>
+
     <p class="textbox-text">Foliar Coverage:</p>
     <input type="text" name="foliar-cov"/>
     <i>%</i>
