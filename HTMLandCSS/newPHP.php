@@ -33,7 +33,7 @@ try{
   $DBH_non_buck = (float)$_POST['DBH-nonBuck'];
   $comp_notes = $_POST['Comp-notes'];
 
-  $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
+  $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"SMM") or die("Some error occurred");
 
   $topID = mysqli_query($recon, "select max(obs_ID) from observations") or die("Some error occured");
   $ID_num = 1+mysqli_fetch_row($topID)[0];

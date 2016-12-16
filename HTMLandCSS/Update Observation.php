@@ -176,7 +176,7 @@ include('SelectPHP.php');
 <footer>
     <div class="foot-text">
         <a href="Home.php"><p>Home</p></a>
-        <p class="foot-CR">© smm 2016</p>
+        <p class="foot-CR">© SMM 2016</p>
     </div>
 </footer>
 </body>
