@@ -16,6 +16,8 @@ try{
 
   //grab the observation data
   $date = $_POST['ObservDate'];
+  //if date is empty throw error, etc for other fields
+
   $quad_GPS = $_POST['quad-N']."'".$_POST['quad-W']."''";
   $quad_size = (float)$_POST['QuadSize'];
   $stem_count = (int)$_POST['stem-count'];
@@ -51,15 +53,15 @@ try{
   $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
 
 
-  $obs_query = "insert into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) values ("
+  $obs_query = "insert into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES ("
   . "7" . ", " . "12" . ", " . $date . ", \"" . $quad_GPS . "\", " . $quad_size . ", " . $stem_count . ", "
       . ".5" . ", " . $fol_cov . ", " . $circumference . ", \"" . $habitat . "\", \"" . $obs_notes . "\");";
 
-  $bio_query = "insert into biodiversity(obs_ID, date, weiner_index, notes) values ("
+  $bio_query = "insert into biodiversity(obs_ID, date, weiner_index, notes) VALUES ("
   . "7" . ", " . $date . ", " . $weiner . ", \"" . $BD_notes . "\");";
-  
+
 //  $spec_query =  "insert into species " .
-  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) values ("
+  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) VALUES ("
   . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
       . $D_non_buck . ", " . $DBH_non_buck . ", \"" . $comp_notes . "\");";
 
