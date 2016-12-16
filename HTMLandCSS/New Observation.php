@@ -12,15 +12,18 @@
     <h1>Create New Observation</h1>
 </header>
 
-<label class="left-btn">Select Group:</label>
-<select class="left-btn">
-    <?php
-
-    ?>
-</select>
-
 <form class="table" action="newPHP.php" method="post">
-
+  <?php
+    include('SelectPHP.php');
+  ?>
+  <label class="left-btn">Select Group:</label>
+  <select class="left-btn" name="group-name">
+      <?php
+        while($groups = mysqli_fetch_array($_SESSION['groups'])){
+          echo "<option>" . $groups['g_name'] ."</option>";
+        }
+      ?>
+  </select>
     <label><strong><i>Observation</i></strong></label>
     <br>
     <hr>
