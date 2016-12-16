@@ -19,20 +19,23 @@ include('SelectPHP.php');
 <form class="table" action="UpdatePHP.php" method="post">
 
     <p>Choose an Observation to Update:</p>
-    <select>
+    <select name="PickedObs">
         <option disabled>Obs Group Date</option>
         <?php
         while($observations = mysqli_fetch_array($_SESSION['result'])){
-            echo "<option>" . $observations['obs_ID'] . "&nbsp&nbsp".
+            $obs_ID = $observations['obs_ID'];
+            echo "<option value='$obs_ID'>" . $observations['obs_ID'] . "&nbsp&nbsp".
                 $observations['g_ID']. "&nbsp&nbsp". $observations['date'] . "</option>";
+        }
+
+        if($_POST['PickedObs'] == 1){
+
         }
         ?>
 
     </select>
     <br>
     <br>
-
-<form class="table" action="newPHP.php" method="post">
 
     <label><strong><i>Observation</i></strong></label>
     <br>
@@ -59,6 +62,12 @@ include('SelectPHP.php');
 
     <p class="textbox-text">Buckthorn Stem Count:</p>
     <input type="text" name="stem-count"/>
+
+    <br>
+    <br>
+
+    <p class="textbox-text">Density:</p>
+    <input type="text" name="density"/>
 
     <br>
     <br>
