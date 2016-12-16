@@ -15,7 +15,7 @@ include('SelectPHP.php');
     <img class="logo" alt="Bethel University" src="https://www.bethel.edu/cdn/images/logo.png">
     <h1>Update an Observation</h1>
 </header>
-  
+
 <form class="table" action="UpdatePHP.php" method="post">
 
     <p>Choose an Observation to Update:</p>
@@ -32,7 +32,7 @@ include('SelectPHP.php');
     <br>
     <br>
 
-<form class="table" action="UpdatePHP.php" method="post">
+<form class="table" action="newPHP.php" method="post">
 
     <label><strong><i>Observation</i></strong></label>
     <br>
@@ -160,7 +160,7 @@ include('SelectPHP.php');
 </form>
 
 <a href="ProfessorHome.php">
-    <div class="btn">Cancel</div>
+    <div class="btn left-btn">Cancel</div>
 </a>
 
 

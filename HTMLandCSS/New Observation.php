@@ -15,11 +15,7 @@
 <label class="left-btn">Select Group:</label>
 <select class="left-btn">
     <?php
-        session_start();
 
-        for($i = 0; $i < count($_SESSION['teams']); $i++){
-            print_r("<option>".$_SESSION['teams'][$i]."</option>");
-        }
     ?>
 </select>
 
@@ -54,8 +50,14 @@
     <br>
     <br>
 
+    <p class="textbox-text">Density:</p>
+    <input type="text" name="density"/>
+
+    <br>
+    <br>
+
     <p class="textbox-text">Foliar Coverage:</p>
-    <input type="text" name="folilar-cov"/>
+    <input type="text" name="foliar-cov"/>
     <i>%</i>
 
     <br>
@@ -148,6 +150,7 @@
 
     <input style="float: right" class="btn" type="submit" value="Submit"/>
     <input type="hidden" name="submit-new" value="Sub_Confirm.php"/>
+    <input type="hidden" name="error" value="oops.php"/>
 </form>
 <a href="Home.php">
     <div class="btn left-btn">Cancel</div>
