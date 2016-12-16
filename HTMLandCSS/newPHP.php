@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
 
 try{
   $obs = array();
@@ -53,28 +54,28 @@ try{
   $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
 
 
-  $obs_query = "insert into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES ("
-  . "7" . ", " . "12" . ", " . $date . ", \"" . $quad_GPS . "\", " . $quad_size . ", " . $stem_count . ", "
-      . ".5" . ", " . $fol_cov . ", " . $circumference . ", \"" . $habitat . "\", \"" . $obs_notes . "\");";
+//  $obs_query = "insert into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES ("
+//  . "7" . ", " . "12" . ", " . $date . ", \"" . $quad_GPS . "\", " . $quad_size . ", " . $stem_count . ", "
+//      . ".5" . ", " . $fol_cov . ", " . $circumference . ", \"" . $habitat . "\", \"" . $obs_notes . "\");";
+  $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
+(7,12,$date,$quad_GPS,$quad_size,$stem_count,10,$fol_cov,$circumference,$habitat,$obs_notes)";
 
-  $bio_query = "insert into biodiversity(obs_ID, date, weiner_index, notes) VALUES ("
-  . "7" . ", " . $date . ", " . $weiner . ", \"" . $BD_notes . "\");";
-
+//  $bio_query = "insert into biodiversity(obs_ID, date, weiner_index, notes) VALUES ("
+//  . "7" . ", " . $date . ", " . $weiner . ", \"" . $BD_notes . "\");";
+//  $bio_query = "insert into biodiversity"
 //  $spec_query =  "insert into species " .
-  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) VALUES ("
-  . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
-      . $D_non_buck . ", " . $DBH_non_buck . ", \"" . $comp_notes . "\");";
+//  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) VALUES ("
+//  . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
+//      . $D_non_buck . ", " . $DBH_non_buck . ", \"" . $comp_notes . "\");";
 
-  echo $obs_query . "\n";
-  echo $bio_query . "\n";
-  echo $comp_query . "\n";
+//  echo $bio_query . "\n";
+//  echo $comp_query . "\n";
   //we have the queries, now to execute
   mysqli_query($recon, $obs_query);
-  mysqli_query($recon, $bio_query);
+  echo $obs_query . "\n";
+//  mysqli_query($recon, $bio_query);
   //TODO mysqli_query($recon, $spec_query);
-  mysqli_query($recon, $comp_query);
-
-
+//  mysqli_query($recon, $comp_query);
 
   // redirect to submission/confirm pages
   //header("Location: {$_POST["submit-new"]}");

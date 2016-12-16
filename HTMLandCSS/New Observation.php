@@ -55,7 +55,7 @@
     <br>
 
     <p class="textbox-text">Foliar Coverage:</p>
-    <input type="text" name="folilar-cov"/>
+    <input type="text" name="foliar-cov"/>
     <i>%</i>
 
     <br>
