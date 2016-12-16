@@ -19,7 +19,7 @@ try{
   $date = $_POST['ObservDate'];
   //if date is empty throw error, etc for other fields
 
-  $quad_GPS = $_POST['quad-N']."'".$_POST['quad-W']."''";
+  $quad_GPS = $_POST['quad-N']."N ".$_POST['quad-W']."W";
   $quad_size = (float)$_POST['QuadSize'];
   $stem_count = (int)$_POST['stem-count'];
   $fol_cov = (float)$_POST['foliar-cov'];
@@ -53,16 +53,13 @@ try{
 
   $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
 
-
-//  $obs_query = "insert into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES ("
-//  . "7" . ", " . "12" . ", " . $date . ", \"" . $quad_GPS . "\", " . $quad_size . ", " . $stem_count . ", "
-//      . ".5" . ", " . $fol_cov . ", " . $circumference . ", \"" . $habitat . "\", \"" . $obs_notes . "\");";
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
-(7,12,$date,$quad_GPS,$quad_size,$stem_count,10,$fol_cov,$circumference,$habitat,$obs_notes)";
+(7,12,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
 
-//  $bio_query = "insert into biodiversity(obs_ID, date, weiner_index, notes) VALUES ("
-//  . "7" . ", " . $date . ", " . $weiner . ", \"" . $BD_notes . "\");";
-//  $bio_query = "insert into biodiversity"
+$bio_query = "insert into biodiversity(obs_ID, date, weiner_index,notes) VALUES (7,'$date',$weiner,'$BD_notes')";
+
+$comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neightbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES 
+(7,12,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
 //  $spec_query =  "insert into species " .
 //  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) VALUES ("
 //  . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
@@ -72,11 +69,11 @@ try{
 //  echo $comp_query . "\n";
   //we have the queries, now to execute
   mysqli_query($recon, $obs_query);
-  echo $obs_query . "\n";
-//  mysqli_query($recon, $bio_query);
+//  echo $obs_query . "\n";
+  mysqli_query($recon, $bio_query);
   //TODO mysqli_query($recon, $spec_query);
 //  mysqli_query($recon, $comp_query);
-
+   // mysqli_query($recon, $obstest);
   // redirect to submission/confirm pages
   //header("Location: {$_POST["submit-new"]}");
 } catch (Exception $e) {
