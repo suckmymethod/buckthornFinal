@@ -58,7 +58,8 @@ try{
   $ID_num = 1+mysqli_fetch_row($topID)[0];
 
   $groupName = $_POST['group-name'];
-  $groupID = mysqli_fetch_row(mysqli_query($recon, "select g_ID from groups where g_name = $groupName"))[0];
+  $groupQuery = mysqli_query($recon, "select g_ID from groups where g_name = \"$groupName\"");
+  $groupID = mysqli_fetch_row($groupQuery)[0];
 
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
 ($ID_num,$groupID,'$date','$quad_GPS',$quad_size,$stem_count,$density,$fol_cov,$circumference,'$habitat','$obs_notes')";
