@@ -8,7 +8,7 @@ try {
     // series of variables that get the select box value and delete that selected observation
     $selection = explode(' ', $_POST['deleteme']);
     $query = "delete from observations where obs_ID = " . $selection[0];
-    $recon = mysqli_connect("localhost", $_SESSION['user'], $_SESSION['pass'], "smm") or die("Some error occurred");
+    $recon = mysqli_connect("localhost", $_SESSION['user'], $_SESSION['pass'], "SMM") or die("Some error occurred");
     mysqli_query($recon, $query);
 
     header("Location: {$_POST["redirect"]}");

@@ -33,14 +33,16 @@ try{
   $DBH_non_buck = (float)$_POST['DBH-nonBuck'];
   $comp_notes = $_POST['Comp-notes'];
 
-  $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
+  $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"SMM") or die("Some error occurred");
 
-  $topID = mysqli_query($recon, "select max(obs_ID) from observations") or die("Some error occured");
-  $ID_num = 1+mysqli_fetch_row($topID)[0];
+  $topID = mysqli_query($recon, "select max(obs_ID) as max from observations") or die("Some error occured");
+  $ID_num = 1+mysqli_fetch_array($topID)['max'];
+  // $temp = mysqli_fetch_array($topID);
+  // $ID_num = 1+$temp['max'];
 
   $groupName = $_POST['group-name'];
   $groupQuery = mysqli_query($recon, "select g_ID from groups where g_name = \"$groupName\"");
-  $groupID = mysqli_fetch_row($groupQuery)[0];
+  $groupID = mysqli_fetch_array($groupQuery)['g_ID'];
 
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
 ($ID_num,$groupID,'$date','$quad_GPS',$quad_size,$stem_count,$density,$fol_cov,$circumference,'$habitat','$obs_notes')";
