@@ -1,3 +1,7 @@
+<?php
+include('SelectPHP.php');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,12 +19,12 @@
 <label class="left-btn">Select Group:</label>
 <select class="left-btn" name="group-name">
     <?php
-      while($groups = mysqli_fetch_array($_SESSION['result'])){
-        echo "<option>" . $groups['obs_ID'] . ' ' .
-            $groups['g_ID']. ' ' . $groups['date'] . "</option>";
+      while($groups = mysqli_fetch_array($_SESSION['groups'])){
+        echo "<option>" . $groups['g_name'] ."</option>";
       }
     ?>
 </select>
+
 
 <form class="table" action="newPHP.php" method="post">
 
