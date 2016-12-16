@@ -58,22 +58,16 @@ try{
 
 $bio_query = "insert into biodiversity(obs_ID, date, weiner_index,notes) VALUES (7,'$date',$weiner,'$BD_notes')";
 
-$comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neightbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES 
-(7,12,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
-//  $spec_query =  "insert into species " .
-//  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) VALUES ("
-//  . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
-//      . $D_non_buck . ", " . $DBH_non_buck . ", \"" . $comp_notes . "\");";
+$comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES 
+(12,7,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
 
-//  echo $bio_query . "\n";
-//  echo $comp_query . "\n";
+//  $spec_query =  "insert into species " .
+
   //we have the queries, now to execute
   mysqli_query($recon, $obs_query);
-//  echo $obs_query . "\n";
   mysqli_query($recon, $bio_query);
   //TODO mysqli_query($recon, $spec_query);
-//  mysqli_query($recon, $comp_query);
-   // mysqli_query($recon, $obstest);
+  mysqli_query($recon, $comp_query);
   // redirect to submission/confirm pages
   //header("Location: {$_POST["submit-new"]}");
 } catch (Exception $e) {
