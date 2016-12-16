@@ -15,11 +15,7 @@
 <label class="left-btn">Select Group:</label>
 <select class="left-btn">
     <?php
-        session_start();
 
-        for($i = 0; $i < count($_SESSION['teams']); $i++){
-            print_r("<option>".$_SESSION['teams'][$i]."</option>");
-        }
     ?>
 </select>
 
