@@ -1,6 +1,6 @@
 <?php
 session_start();
-$recon = mysqli_connect("localhost", $_SESSION['user'], $_SESSION['pass'], "smm") or die("Some error occurred");
+$recon = mysqli_connect("localhost", $_SESSION['user'], $_SESSION['pass'], "SMM") or die("Some error occurred");
 
 try {
     // adding a new group
