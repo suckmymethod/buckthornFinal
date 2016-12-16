@@ -60,12 +60,12 @@ try{
   $groupID = mysqli_fetch_row(mysqli_query($recon, "select g_ID from groups where g_name = $groupName"))[0];
 
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
-($ID_num,12,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
+($ID_num, $groupID,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
 
   $bio_query = "insert into biodiversity(obs_ID, date, weiner_index,notes) VALUES ($ID_num,'$date',$weiner,'$BD_notes')";
 
   $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES
-(12,$ID_num,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
+($groupID,$ID_num,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
 
   //we have the queries, now to execute
   mysqli_query($recon, $obs_query);

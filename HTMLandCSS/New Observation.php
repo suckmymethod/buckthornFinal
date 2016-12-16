@@ -15,7 +15,10 @@
 <label class="left-btn">Select Group:</label>
 <select class="left-btn" name="group-name">
     <?php
-
+      while($groups = mysqli_fetch_array($_SESSION['result'])){
+        echo "<option>" . $groups['obs_ID'] . ' ' .
+            $groups['g_ID']. ' ' . $groups['date'] . "</option>";
+      }
     ?>
 </select>
 
