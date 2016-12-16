@@ -22,6 +22,7 @@ include('SelectPHP.php');
     <select name="PickedObs">
         <option disabled>Obs Group Date</option>
         <?php
+        // fills the select box for choosing the observation
         while ($observations = mysqli_fetch_array($_SESSION['result'])) {
             $obs_ID = $observations['obs_ID'];
             echo "<option value='$obs_ID'>" . $observations['obs_ID'] . "&nbsp&nbsp" .
@@ -40,7 +41,7 @@ include('SelectPHP.php');
     <br>
     <hr>
     <p class="textbox-text">Date of Observation:</p>
-    <input type="text" value="<?php echo $_SESSION['obs']['date']; ?>" name="ObservDate"/>
+    <input type="text" name="ObservDate"/>
     <i>(YYYY-MM-DD)</i>
 
     <br>

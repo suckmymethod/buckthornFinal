@@ -1,4 +1,8 @@
 <?php
+
+//UNFINISHED: data is never stored into text fields on update in which this
+// would grab the fields from the update observation and re-submit the values
+
 session_start();
 error_reporting(E_ALL);
 ini_set('display_errors','1');
