@@ -56,6 +56,9 @@ try{
   $topID = mysqli_query($recon, "select max(obs_ID) from observations") or die("Some error occured");
   $ID_num = 1+mysqli_fetch_row($topID)[0];
 
+  $groupName = $_POST['group-name'];
+  $groupID = mysqli_fetch_row(mysqli_query($recon, "select g_ID from groups where g_name = $groupName"))[0];
+
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
 ($ID_num,12,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
 

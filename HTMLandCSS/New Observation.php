@@ -13,7 +13,7 @@
 </header>
 
 <label class="left-btn">Select Group:</label>
-<select class="left-btn">
+<select class="left-btn" name="group-name">
     <?php
 
     ?>
