@@ -25,6 +25,7 @@
         }
       ?>
   </select>
+  <br><br>
     <label><strong><i>Observation</i></strong></label>
     <br>
     <hr>
