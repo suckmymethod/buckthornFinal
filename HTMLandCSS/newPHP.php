@@ -53,13 +53,17 @@ try{
 
   $recon = mysqli_connect("localhost",$_SESSION['user'],$_SESSION['pass'],"smm") or die("Some error occurred");
 
+  $topID = mysqli_query($recon, "select max(obs_ID) from observations") or die("Some error occured");
+  $ID_num = 1+mysqli_fetch_row($topID)[0];
+  echo $ID_num;
+
   $obs_query ="INSERT into observations(obs_ID, g_ID, date, quad_GPS, quad_Size, num_stems, density, foliar_Coverage, stem_Circum, habitat, notes_photos) VALUES
-(7,12,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
+($ID_num,12,'$date','$quad_GPS',$quad_size,$stem_count,10,$fol_cov,$circumference,'$habitat','$obs_notes')";
 
 $bio_query = "insert into biodiversity(obs_ID, date, weiner_index,notes) VALUES (7,'$date',$weiner,'$BD_notes')";
 
-$comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neightbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES 
-(7,12,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
+$comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neightbor_Diam, non_neighbor_Dist, non_neighbor_Diam, notes) VALUES
+($ID_num,12,'$date',6,$D_close,$DBH_close,$D_non_buck,$DBH_non_buck,'$comp_notes')";
 //  $spec_query =  "insert into species " .
 //  $comp_query = "insert into competition(g_ID, obs_ID, date, diameter, neighbor_Dist, neighbor_Diam, non-neighbor_Dist, non-neighbor_Diam, notes) VALUES ("
 //  . "7" . ", " . "12" . ", ". $date . ", " . $DBH . ", " . $D_close . ", " . $DBH_close . ", "
